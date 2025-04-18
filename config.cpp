@@ -80,6 +80,6 @@ class CfgVehicles
 	class Fireplace;
 
 	// Fireplace which burns for eternity
-	class Zen_EternalFireplace: Fireplace {};
+	class Syn_EternalFireplace: Fireplace {};
 
 };
