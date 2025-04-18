@@ -1,6 +1,6 @@
-class Zen_SpotlightObject extends Inventory_Base
+class Syn_SpotlightObject extends Inventory_Base
 {
-	void Zen_SpotlightObject()
+	void Syn_SpotlightObject()
 	{
 		SetPilotLight(true);
 		SetIsHologram(true);

@@ -1,6 +1,6 @@
-class Zen_InteriorLight extends Inventory_Base
+class Syn_InteriorLight extends Inventory_Base
 {
-	void Zen_InteriorLight()
+	void Syn_InteriorLight()
 	{
 		SetPilotLight(true);
 		SetIsHologram(true);

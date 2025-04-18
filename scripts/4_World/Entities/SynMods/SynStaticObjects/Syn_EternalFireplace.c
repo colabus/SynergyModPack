@@ -14,7 +14,7 @@ class Syn_EternalFireplace : Fireplace
 			m_FuelBurnRateMP	= 0.000001;
 			m_TemperatureLossMP = m_FuelBurnRateMP;
 			m_SynBurningCheckTimer = new Timer(CALL_CATEGORY_GAMEPLAY);
-			m_SynBurningCheckTimer.Run(300, this, "FireStarta", null, true);
+			m_SynBurningCheckTimer.Run(300, this, "FireStarter", null, true);
 
 			if (FindAttachmentBySlotName("Stone") == NULL)
 			{
@@ -27,7 +27,7 @@ class Syn_EternalFireplace : Fireplace
 				}
 			}
 
-			GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(FireStarta, 1000, false);
+			GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(FireStarter, 1000, false);
 		}
 	};
 
@@ -84,7 +84,7 @@ class Syn_EternalFireplace : Fireplace
 		return super.CanReceiveItemIntoCargo(item);
 	}
 
-	void FireStarta()
+	void FireStarter()
 	{
 		// Create tinder & fuel
 		ItemBase wood = ItemBase.Cast(FindAttachmentBySlotName("Firewood"));

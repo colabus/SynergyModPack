@@ -1,6 +1,6 @@
-class Zen_InteriorLightDim extends Inventory_Base
+class Syn_InteriorLightDim extends Inventory_Base
 {
-	void Zen_InteriorLightDim()
+	void Syn_InteriorLightDim()
 	{
 		SetPilotLight(true);
 		SetIsHologram(true);
