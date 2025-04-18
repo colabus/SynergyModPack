@@ -30,5 +30,5 @@ class CfgVehicles
 {
 	class FireplaceBase;
 	class Fireplace: FireplaceBase {};
-	class Zen_EternalFireplace: Fireplace {};
+	class Syn_EternalFireplace: Fireplace {};
 };
