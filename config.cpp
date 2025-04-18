@@ -74,3 +74,12 @@ class CfgMods
 		};
 	};
 };
+
+class CfgVehicles
+{
+	class Fireplace;
+
+	// Fireplace which burns for eternity
+	class Zen_EternalFireplace: Fireplace {};
+
+};
