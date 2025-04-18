@@ -7,7 +7,9 @@
 		{
 			"DZ_Data",
 			"DZ_Scripts",
-			"Namalsk Island"
+
+			// As part of Namalsk Island mod by Sumrak
+			"namalsk_scripts"
 		};
 	};
 };
