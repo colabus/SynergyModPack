@@ -1,4 +1,18 @@
-﻿class CfgMods
+﻿class CfgPatches
+{
+	class SynergyModPack
+	{
+		requiredVersion = 0.1;
+		requiredAddons[] =
+		{
+			"DZ_Data",
+			"DZ_Scripts",
+			"Namalsk Island"
+		};
+	};
+};
+
+class CfgMods
 {
 	class SynergyModPack
 	{
@@ -15,6 +29,30 @@
 		};
 		class defs
 		{
+			class engineScriptModule
+			{
+				files[]=
+				{
+					"SynergyModPack/scripts/1_Core",
+					"SynergyModPack/scripts/Common"
+				};
+			};
+			class gameLibScriptModule
+			{
+				files[]=
+				{
+					"SynergyModPack/scripts/2_GameLib",
+					"SynergyModPack/scripts/Common"
+				};
+			};
+			class gameScriptModule
+			{
+				files[] = 
+				{ 
+					"SynergyModPack/scripts/3_Game",
+					"SynergyModPack/scripts/Common"
+				};
+			};
 			class worldScriptModule
 			{
 				files[] = 
@@ -23,12 +61,14 @@
 					"SynergyModPack/scripts/Common"
 				};
 			};
+			class missionScriptModule
+			{
+				files[] = 
+				{ 
+					"SynergyModPack/scripts/5_mission",
+					"SynergyModPack/scripts/common"
+				};
+			};
 		};
 	};
-};
-class CfgVehicles
-{
-	class FireplaceBase;
-	class Fireplace: FireplaceBase {};
-	class Syn_EternalFireplace: Fireplace {};
 };
