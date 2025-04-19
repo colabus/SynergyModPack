@@ -6,7 +6,8 @@
 		requiredAddons[] =
 		{
 			"DZ_Data",
-			"DZ_Scripts"
+			"DZ_Scripts",
+			"DZ_Gear_Cooking"
 		};
 	};
 };
