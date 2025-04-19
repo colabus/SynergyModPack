@@ -77,11 +77,13 @@ class CfgMods
 
 class CfgVehicles
 {
-	class FireplaceBase;
-
-	class Fireplace : FireplaceBase {};
+	class Fireplace;
 
 	// Fireplace which burns for eternity
-	class Syn_EternalFireplace: Fireplace {};
+	class Syn_EternalFireplace: Fireplace {
+		scope = 2;
+		displayName = "Eternal Fireplace";
+		descriptionShort = "A fireplace that never burns out.";
+	};
 
 };
