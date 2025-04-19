@@ -78,6 +78,7 @@ class CfgMods
 class CfgVehicles
 {
 	class Fireplace;
+	class Inventory_Base;
 
 	// Fireplace which burns for eternity
 	class Syn_EternalFireplace: Fireplace {
