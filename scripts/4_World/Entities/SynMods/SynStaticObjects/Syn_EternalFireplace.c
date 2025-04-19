@@ -27,6 +27,24 @@ class Syn_EternalFireplace : Fireplace
 				}
 			}
 
+			if (FindAttachmentBySlotName("Tripod") == NULL)
+			{
+				ItemBase tripod = ItemBase.Cast(GetInventory().CreateAttachment("Tripod"));
+				if (tripod)
+				{
+					tripod.LockToParent(); // Lock the tripod so it doesn’t fall off
+				}
+			}
+			
+			if (FindAttachmentBySlotName("CookingPot") == NULL)
+			{
+				ItemBase pot = ItemBase.Cast(GetInventory().CreateAttachment("CookingPot"));
+				if (pot)
+				{
+					pot.LockToParent(); // Lock the pot too
+				}
+			}
+
 			GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(FireStarter, 1000, false);
 		}
 	};
