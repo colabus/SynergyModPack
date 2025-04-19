@@ -36,9 +36,9 @@ class Syn_EternalFireplace : Fireplace
 				}
 			}
 			
-			if (FindAttachmentBySlotName("CookingPot") == NULL)
+			if (FindAttachmentBySlotName("Pot") == NULL)
 			{
-				ItemBase pot = ItemBase.Cast(GetInventory().CreateAttachment("CookingPot"));
+				ItemBase pot = ItemBase.Cast(GetInventory().CreateAttachment("Pot"));
 				if (pot)
 				{
 					pot.LockToParent(); // Lock the pot too

@@ -82,15 +82,15 @@ class CfgVehicles
 
 	// Fireplace which burns for eternity
 	class Syn_EternalFireplace: Fireplace {
-		scope = 1;
+		scope = 2;
 		displayName = "Eternal Fireplace";
-		descriptionShort = "A fireplace that never burns out.";
+		descriptionShort = "Campfire stories not included, but existential dread is free.";
 	};
 
 	// Some various lighting objects
 	class Syn_SpotlightObject: Inventory_Base
 	{
-		scope=1;
+		scope=2;
 		storageCategory = 10;
 		model = "\dz\gear\consumables\Stone.p3d";
 		hiddenSelections[] = { "zbytek" };
@@ -120,7 +120,7 @@ class CfgVehicles
 	};
 	class Syn_StreetLight : Inventory_Base
 	{
-		scope=1;
+		scope=2;
 		storageCategory = 10;
 		model = "\dz\gear\consumables\Stone.p3d";
 		forceFarBubble = "true";
@@ -150,7 +150,7 @@ class CfgVehicles
 	};
 	class Syn_InteriorLight : Inventory_Base
 	{
-		scope=1;
+		scope=2;
 		storageCategory = 10;
 		model = "\dz\gear\consumables\Stone.p3d";
 		forceFarBubble = "true";
@@ -180,7 +180,7 @@ class CfgVehicles
 	};
 	class Syn_InteriorLightDim : Inventory_Base
 	{
-		scope=1;
+		scope=2;
 		storageCategory = 10;
 		model = "\dz\gear\consumables\Stone.p3d";
 		forceFarBubble = "true";
