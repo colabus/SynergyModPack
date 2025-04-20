@@ -5,7 +5,7 @@ modded class ActionExtinguishFireplaceByLiquid: ActionContinuousBase
 		Object target_object = target.GetObject();
 		
 		//! Don't allow extinguishing eternal fireplace
-		if (target_object.IsInherited(Syn_EternalFireplace))
+		if (target_object.IsInherited(Syn_EternalStoneCircleFireplace) || target_object.IsInherited(Syn_EternalStoneOvenFireplace))
 			return false;
 
 		return super.ActionCondition(player, target, item);

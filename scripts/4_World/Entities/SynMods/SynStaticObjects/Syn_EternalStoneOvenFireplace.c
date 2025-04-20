@@ -1,4 +1,4 @@
-class Syn_EternalFireplace : Fireplace
+class Syn_EternalStoneOvenFireplace : Fireplace
 {
 	protected ref Timer m_SynBurningCheckTimer;
 
@@ -21,35 +21,16 @@ class Syn_EternalFireplace : Fireplace
 				ItemBase stones = ItemBase.Cast(GetInventory().CreateAttachment("Stone"));
 				if (stones)
 				{
-					stones.SetQuantity(8);
+					stones.SetQuantity(16);
 					stones.LockToParent();
-					SetStoneCircleState(true);
+					SetOvenState(true);
 				}
 			}
-
-			if (FindAttachmentBySlotName("Tripod") == NULL)
-			{
-				ItemBase tripod = ItemBase.Cast(GetInventory().CreateAttachment("Tripod"));
-				if (tripod)
-				{
-					tripod.LockToParent(); // Lock the tripod so it doesn’t fall off
-				}
-			}
-			
-			if (FindAttachmentBySlotName("Pot") == NULL)
-			{
-				ItemBase pot = ItemBase.Cast(GetInventory().CreateAttachment("Pot"));
-				if (pot)
-				{
-					pot.LockToParent(); // Lock the pot too
-				}
-			}
-
 			GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(FireStarter, 1000, false);
 		}
 	};
 
-	void ~Syn_EternalFireplace()
+	void ~Syn_EternalStoneOvenFireplace()
 	{
 		if (GetGame() && m_ClutterCutter)
 			GetGame().ObjectDelete(m_ClutterCutter);
